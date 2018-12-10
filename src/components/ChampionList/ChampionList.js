@@ -1,17 +1,15 @@
 import React from 'react';
 
 import Champion from './Champion/Champion';
-
+import '../../styles/ChampionList.css';
 
 const championList = () => {
-  let champList = ["Akali", "Aatrox", "Karthus", "Varus", "Cho'gath"]
+  let champList = ["Akali", "Aurelion Sol", "Cho'gath", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus", "Karthus",]
   return (
     <div className='championList'>
-      <p>na he</p>
       {champList.map((element) =>
-        <div  key={element} >
+        <div key={element} >
           <Champion name={element}/>
-          <p>na mi</p>
         </div>
       )}
     </div>

@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Aux from '../../hoc/Hoc';
-import './Layout.css'
+import Toolbar from '../UI/Toolbar/Toolbar';
+import '../../styles/Layout.css';
+import Sidebar from '../UI/Sidebar/Sidebar';
 
-const layout = ( props ) => (
-  <Aux>
-    <div>Menu controls, Search bar, Login</div>
-    <main className='content'>
-      {props.children}
-    </main>
-  </Aux>
-);
+class Layout extends Component {
+  state = {
+    sidebarVisible: false
+  }
 
-export default layout;
+  sidebarDrawerToggleHandler = () => {
+    this.setState((prevState) => {
+      return {sidebarVisible: !prevState.sidebarVisible};
+    })
+  }
+
+  render () {
+    return (
+      <Aux>
+        <Toolbar />
+        <Sidebar />
+        <main className='content'>
+          {this.props.children}
+        </main>
+      </Aux>
+    )
+  }
+} 
+
+Layout.propTypes = {
+  children: PropTypes.element.isRequired
+}
+
+export default Layout;
