@@ -4,7 +4,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: aquamarine;
+  background-color: rgb(41, 36, 61);
+  z-index: 4;
+  color: white;
 }
 
 .sideBarDrawerShader {
@@ -15,4 +17,5 @@
   left: 0;
   background-color: black;
   opacity: 0.5;
+  z-index: 3;
 }

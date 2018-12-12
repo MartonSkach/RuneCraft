@@ -8,7 +8,7 @@ import Sidebar from '../UI/Sidebar/Sidebar';
 
 class Layout extends Component {
   state = {
-    sidebarVisible: false
+    sidebarVisible: true
   }
 
   sidebarDrawerToggleHandler = () => {
@@ -18,10 +18,17 @@ class Layout extends Component {
   }
 
   render () {
+    let sidebar = null;
+    if (this.state.sidebarVisible) {
+      sidebar = <Sidebar 
+      sidebarVisibility={this.state.sidebarVisible} 
+      toggleSidebar={this.sidebarDrawerToggleHandler}
+      />
+    }
     return (
       <Aux>
-        <Toolbar />
-        <Sidebar />
+        <Toolbar toggleSidebar={this.sidebarDrawerToggleHandler} />
+        {sidebar}
         <main className='content'>
           {this.props.children}
         </main>
