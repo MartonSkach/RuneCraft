@@ -1,0 +1,12 @@
+{
+  "champions": [
+    { "name": "Aatrox", "role": "Tank" },
+    { "name": "Darius", "role": "Tank" },
+    { "name": "Ashe", "role": "Tank" },
+    { "name": "Thresh", "role": "Tank" },
+    { "name": "Azir", "role": "Mage" },
+    { "name": "Cho'gath", "role": "Mage" },
+    { "name": "Aurelion Sol", "role": "Mage" },
+    { "name": "Nidalee", "role": "Mage" }
+  ]
+}

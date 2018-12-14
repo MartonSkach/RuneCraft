@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import '../../../styles/Sidebar.css';
 import Aux from '../../../hoc/Hoc';
 
-const sidebar = (props) => (
-  <Aux>
-    <div onClick={props.toggleSidebar} className='sideBarDrawerShader'></div>
-    <div className='sideBarDrawer'>
-      <p>SIDE</p>
-      <p>Bar</p>
-    </div>
-  </Aux>
-);
-
-sidebar.propTypes = {
-  toggleSidebar: PropTypes.func.isRequired
+class Sidebar extends Component {
+  render () {
+    return (
+      <Aux>
+        <div className='sideBarDrawerShader'
+          onClick={this.props.toggleSidebar} 
+          style={{
+            display: this.props.sidebarVisibility ? 'inline' : 'none',
+            opacity: this.props.sidebarVisibility ? '.5' : '0'
+          }}
+        ></div>
+        <div className='sideBarDrawer'
+          style={{
+            left: this.props.sidebarVisibility ? '0' : '-100%',
+            opacity: this.props.sidebarVisibility ? '1' : '0'
+          }}
+        >
+        </div>
+      </Aux>
+    )
+  }
 }
 
-export default sidebar;
+Sidebar.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
+  sidebarVisibility: PropTypes.bool.isRequired
+}
+
+export default Sidebar;

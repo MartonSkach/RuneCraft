@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 
-import Layout from  './components/Layout/Layout';
-import RuneCraft from './containers/RuneCraft/RuneCraft';
+import Layout from  './components/UI/Layout/Layout';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Layout>
-          <RuneCraft />
-        </Layout>
+        <Layout />
       </div>
     );
   }

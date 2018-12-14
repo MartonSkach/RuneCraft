@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import HamburgerButton from '../Elements/HamburgerButton/HamburgerButton';
 import '../../../styles/Toolbar.css';
 
 class Toolbar extends Component {
   render() {
     return (
       <div className='toolbar'>
-        <button onClick={this.props.toggleSidebar}>SIDEBAR</button>
-        <p>Hamburger, Logo</p>
+        <HamburgerButton toggleSidebar={this.props.toggleSidebar}/>
       </div>
     )
   }
