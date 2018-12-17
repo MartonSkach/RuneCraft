@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import '../../../../styles/SearchBar.css';
 class SearchBar extends Component {
 
   handleInputChange = () => {
@@ -10,8 +11,9 @@ class SearchBar extends Component {
   render () {
     return (
       <form>
-        <input 
-          placeholder="Search for..."
+        <input
+          className='searchBar' 
+          placeholder="Look for a champion"
           ref={input => this.search = input}
           onChange={this.handleInputChange}
         />

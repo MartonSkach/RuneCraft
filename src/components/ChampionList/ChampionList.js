@@ -16,6 +16,7 @@ class ChampionList extends Component {
     axios.get('https://runemock-10237.firebaseio.com/champions.json/')
     .then( response => {
       // Trial delay for loader
+      console.log(response.data)
       setTimeout(
         function() {
           this.setState( { champList: response.data } );
@@ -33,7 +34,7 @@ class ChampionList extends Component {
   render() {
     if (this.state.champList !== null) {
       let championRenderList = [];
-      this.state.champList.forEach(element => {
+      this.state.champList.champions.forEach(element => {
       if (element.name.toUpperCase().includes(this.props.searchQuery.toUpperCase())) {
         championRenderList.push(element.name);
       }

@@ -1,9 +1,18 @@
 .championPortraitDiv {
   width: 180px;
-  height: auto;
+  height: 146px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.portrait {
+  border: 1px solid #756342;
+  transition: .25s ease-out;
+}
+
+.portrait:hover {
+  border: 1px solid #c9aa71;
+  box-shadow: 0px 0px 20px #e4c180;}
 

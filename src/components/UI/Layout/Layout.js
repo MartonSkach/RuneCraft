@@ -28,15 +28,15 @@ class Layout extends Component {
   render () {
     return (
       <Aux>
-        <Toolbar toggleSidebar={this.sidebarDrawerToggleHandler} />
+        <Toolbar 
+          toggleSidebar={this.sidebarDrawerToggleHandler} 
+          updateSearchQuery={this.updateSearchQuery}
+        />
         <Sidebar 
           sidebarVisibility={this.state.sidebarVisible} 
           toggleSidebar={this.sidebarDrawerToggleHandler}
         />
         <main className='content'>
-          <SearchBar updateSearchQuery={this.updateSearchQuery} />
-          <RoleSelect />
-          <h1>{this.state.searchQuery}</h1>
           <ChampionList
             championList={this.getChampionList} 
             searchQuery={this.state.searchQuery} 

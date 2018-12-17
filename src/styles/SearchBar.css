@@ -1,0 +1,12 @@
+.searchBar {
+  padding-left: 10px;
+  height: 30px;
+  width: 190px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  background-image: url('../assets/images/icons/search.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) calc(50%);
+  font-size: 1em;
+}

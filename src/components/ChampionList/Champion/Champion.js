@@ -8,7 +8,7 @@ class Champion extends Component {
     return (
       <div className='championPortraitDiv'>
         <span>{this.props.name}</span>
-        <img src={`/assets/portraits/${this.props.name.replace(`'`, ``)}.png`} />
+        <img className="portrait" src={`/assets/portraits/${this.props.name.replace(`'`, ``)}.png`} />
       </div>
     )
   } 
