@@ -28,7 +28,7 @@
 
 .logoWrapper {
   height: 100%;
-  width: 15%;
+  width: 48px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -37,7 +37,7 @@
 
 .hamburgerWrapper {
   height: 100%;
-  width: 15%;
+  width: 48px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

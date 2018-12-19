@@ -10,14 +10,14 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <form>
+      <div>
         <input
           className='searchBar' 
-          placeholder="Look for a champion"
+          placeholder="Find a champion"
           ref={input => this.search = input}
           onChange={this.handleInputChange}
         />
-      </form>
+      </div>
     )
   }
 }

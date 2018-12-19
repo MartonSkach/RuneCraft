@@ -5,15 +5,15 @@
   flex-flow: column;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 4px 0;
+  padding: 8px 0;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 .hamburgerButton div {
-  width: 80%;
+  width: 50%;
   height: 4px;
-  background-color: white;
+  background-color: #C8A975;
 }
 
 @media (min-width: 1025px) {

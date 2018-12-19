@@ -34,7 +34,7 @@ class ChampionList extends Component {
   render() {
     if (this.state.champList !== null) {
       let championRenderList = [];
-      this.state.champList.champions.forEach(element => {
+      this.state.champList.forEach(element => {
       if (element.name.toUpperCase().includes(this.props.searchQuery.toUpperCase())) {
         championRenderList.push(element.name);
       }

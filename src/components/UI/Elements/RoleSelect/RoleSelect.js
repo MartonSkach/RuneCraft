@@ -1,29 +1,47 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import '../../../../styles/RoleSelect.css';
+
 class RoleSelect extends Component {
+  
+  handleCheckboxChange = () => {
+    console.log(this.filter)
+  }
   render () {
     return (
-      <form>
-      <div className="radio">
-        <label>
-          <input type="radio" value="option1" />
-          Option 1
-        </label>
+      <div className="filterButtonsWrapper">
+        <div className="radio">
+          <label>
+            <input 
+              type="checkbox" 
+              value="Mage"
+              ref={input => this.filter = input} 
+              onChange={this.handleCheckboxChange} />
+            Mage
+          </label>
+        </div>
+        <div className="radio">
+          <label>
+            <input 
+              type="checkbox" 
+              value="Tank"
+              ref={input => this.filter = input} 
+              onChange={this.handleCheckboxChange} />
+            Tank
+          </label>
+        </div>
+        <div className="radio">
+          <label>
+            <input 
+              type="checkbox" 
+              value="Kiscica" 
+              ref={input => this.filter = input}
+              onChange={this.handleCheckboxChange} />
+            Kiscica
+          </label>
+        </div>
       </div>
-      <div className="radio">
-        <label>
-          <input type="radio" value="option2" />
-          Option 2
-        </label>
-      </div>
-      <div className="radio">
-        <label>
-          <input type="radio" value="option3" />
-          Option 3
-        </label>
-      </div>
-    </form>
     )
   }
 }
