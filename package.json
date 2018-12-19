@@ -1,9 +1,10 @@
 {
-  "name": "react-slingshot",
+  "name": "runecraft",
   "version": "7.0.1",
   "description": "Starter kit for creating apps with React and Redux",
   "engines": {
-    "npm": ">=3"
+    "node": "8.3.0",
+    "npm": "6.4.1"
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
