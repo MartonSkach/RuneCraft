@@ -1,7 +1,8 @@
 {
   "name": "runecraft",
   "version": "7.0.1",
-  "description": "Starter kit for creating apps with React and Redux",
+  "description": "RuneCraft",
+  "main": "App.js",
   "engines": {
     "node": "8.3.0",
     "npm": "6.4.1"
