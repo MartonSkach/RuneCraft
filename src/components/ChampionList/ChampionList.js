@@ -9,14 +9,14 @@ class ChampionList extends Component {
 
   state = {
     champList: null,
-    error: false
+    error: false,
+    errorMessage: null
   }
 
   componentDidMount () {
     axios.get('https://runemock-10237.firebaseio.com/champions.json/')
     .then( response => {
       // Trial delay for loader
-      console.log(response.data)
       setTimeout(
         function() {
           this.setState( { champList: response.data } );
@@ -26,8 +26,7 @@ class ChampionList extends Component {
         );
     } )
     .catch( error => {
-      this.setState( { error: true } )
-      console.log(error);
+      this.setState( { error: true }, {errorMessage: error} )
     } )
   }
 
