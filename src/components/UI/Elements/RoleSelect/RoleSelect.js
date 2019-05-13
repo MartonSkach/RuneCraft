@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import '../../../../styles/RoleSelect.css';
 
 class RoleSelect extends Component {
   
   handleCheckboxChange = () => {
-
+    console.log(this.filter)
   }
   render () {
     return (
@@ -43,6 +44,10 @@ class RoleSelect extends Component {
       </div>
     )
   }
+}
+
+RoleSelect.propTypes = {
+
 }
 
 export default RoleSelect

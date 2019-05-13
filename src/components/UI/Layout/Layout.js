@@ -6,6 +6,7 @@ import Toolbar from '../Toolbar/Toolbar';
 import Sidebar from '../Sidebar/Sidebar';
 import RoleSelect from '../Elements/RoleSelect/RoleSelect';
 import Disclaimer from '../Elements/Disclaimer/Disclaimer';
+import axios from '../../../axios-orders';
 import '../../../styles/Layout.css';
 
 class Layout extends Component {
@@ -13,8 +14,7 @@ class Layout extends Component {
     sidebarVisible: false,
     searchQuery: '',
     checkedRoles: [],
-    responseContent: null,
-    error: null
+    responseContent: null
   }
 
   sidebarDrawerToggleHandler = () => {
@@ -30,27 +30,27 @@ class Layout extends Component {
   render () {
     return (
       <Aux>
-        <Toolbar 
-          toggleSidebar={this.sidebarDrawerToggleHandler} 
+        <Toolbar
+          toggleSidebar={this.sidebarDrawerToggleHandler}
           updateSearchQuery={this.updateSearchQuery}
         />
-        <Sidebar 
-          sidebarVisibility={this.state.sidebarVisible} 
+        <Sidebar
+          sidebarVisibility={this.state.sidebarVisible}
           toggleSidebar={this.sidebarDrawerToggleHandler}
         />
         <div className='contentWrapper'>
           <main className='content'>
             <RoleSelect />
             <ChampionList
-              championList={this.getChampionList} 
-              searchQuery={this.state.searchQuery} 
+              championList={this.getChampionList}
+              searchQuery={this.state.searchQuery}
               />
-            <Disclaimer />
           </main>
         </div>
+        <Disclaimer />
       </Aux>
     )
   }
-} 
+}
 
 export default Layout;

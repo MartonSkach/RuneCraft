@@ -2,13 +2,22 @@
 .championList {
   top: 20px;
   width: auto;
-  display: inline-flex;
+  max-height: 600px;
+  overflow-y: scroll;
+  display: flex;
   flex-wrap: wrap;
   z-index: 1;
   justify-content: center;
+  align-items: center;
   color: white;
   position: relative;
-  margin-bottom: 80px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.championList::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .loader,
